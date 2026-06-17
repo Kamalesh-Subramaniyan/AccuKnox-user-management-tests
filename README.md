@@ -153,3 +153,76 @@ Because the application under test is a public demo environment, test execution 
 * Dynamic data changes by other users
 
 These issues are related to the shared nature of the demo environment and not the automation framework.
+## Problem Statement 2
+
+### Objective 1: System Health Monitoring Script
+
+A Python script was developed to monitor basic system health metrics and generate alerts when threshold values are exceeded.
+
+#### Monitored Metrics
+- CPU Usage
+- Memory Usage
+- Disk Usage
+
+#### Features
+- Displays current system resource utilization.
+- Compares values against predefined thresholds.
+- Prints alert messages when usage exceeds limits.
+
+#### Run Command
+
+```bash
+python scripts/system_health_monitor.py
+```
+
+#### Sample Output
+
+```text
+===== System Health Check =====
+CPU Usage: 25%
+Memory Usage: 58%
+Disk Usage: 42%
+
+System Health Check Completed
+```
+
+---
+
+### Objective 2: Application Health Checker
+
+A Python script that checks application availability by sending an HTTP request and validating the returned status code.
+
+#### Features
+- Sends an HTTP GET request to the target application.
+- Verifies HTTP status code.
+- Reports application status as UP or DOWN.
+- Handles connection and timeout exceptions.
+
+#### Run Command
+
+```bash
+python scripts/application_health_checker.py
+```
+
+#### Sample Output
+
+```text
+===== Application Health Check =====
+Status Code: 200
+Application Status: UP
+```
+
+---
+
+### Files
+
+```text
+scripts/
+├── system_health_monitor.py
+└── application_health_checker.py
+```
+
+### Screenshots
+
+- `screenshots/all-tests-passed.png` – Playwright execution result
+- `screenshots/problem_2.png` – Problem Statement 2 execution output
